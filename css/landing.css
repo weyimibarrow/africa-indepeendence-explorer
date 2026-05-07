@@ -19,13 +19,10 @@
 }
 #globe {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
     z-index: 2;
-    border-radius: 50%;
-    background-image: url('../assets/globe-texture.jpg');
-    background-size: cover;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
