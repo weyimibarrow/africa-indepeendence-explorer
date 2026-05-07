@@ -11,4 +11,16 @@ const myGlobe = Globe()(globeContainer)
          myGlobe.controls().autoRotate = true;
         myGlobe.controls().autoRotateSpeed = 0.8;
     }, 1000);
+    globeContainer.addEventListener("click", function() {
+        myGlobe.pointOfView({ lat: 2, lng: 20, altitude: 2.5}, 1500);
+
+        setTimeout(function() {
+            myGlobe.pointOfView({ lat: 2, lng: 20, altitude: 0.4}, 1500);
+        }, 1500);
+
+        setTimeout(function() {
+            document.getElementById("landing-screen").classList.add("fade-out");
+            document.getElementById("explorer-screen").classList.add("fade-in");
+        }, 2000);
+    });
 });
